@@ -11,7 +11,7 @@ interface ICredentials {
 
 const credentials = path.resolve(__dirname, 'firebase.json');
 const readContent = fs.readFileSync(credentials)
-const credentialJSON = JSON.parse(readContent.toString().replace(/(<([^>]+)>)/gi, '').replace(/\r?\n|\r/g, '')) as ICredentials;
+const credentialJSON = JSON.parse(readContent.toString().replace(/(<([^>]+)>)/gi, '').replace(/\r?\n|\r/gm, '').trim()) as ICredentials;
 // console.log("🚀 ~ file: index.ts ~ line 8 ~ credentialJSON", credentialJSON.private_key)
 
 const apiFirebase = firebase.initializeApp({
