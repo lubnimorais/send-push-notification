@@ -2,7 +2,8 @@ import firebase from 'firebase-admin';
 import path from 'path';
 import fs from 'fs';
 
-import credentials from './firebase.json';
+// import credentials from './firebase.json';
+import credentials from './macom-news-firebase.json';
 
 interface ICredentials {
   client_email: string;
