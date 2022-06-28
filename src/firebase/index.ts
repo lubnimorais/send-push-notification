@@ -7,4 +7,17 @@ const apiFirebase = firebase.initializeApp({
   credential: firebase.credential.cert(credentials),
 })
 
+// OTHER WAY
+
+// resolveJsonModule in tsconfig.json have be enabled
+// import credendials from './macom-news-firebase.json';
+
+// const apiFirebase = firebase.initializeApp({
+//   credential: firebase.credential.cert({
+//     projectId: credentials.project_id,
+//     clientEmail: credentials.client_email,
+//     privateKey: credentials.private_key,
+//   }),
+// })
+
 export { apiFirebase };
