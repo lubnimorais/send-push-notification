@@ -8,6 +8,7 @@ const apiFirebase = firebase.initializeApp({
 })
 
 // OTHER WAY
+// import credentials from './macom-news-firebase.json';
 
 // resolveJsonModule in tsconfig.json have be enabled
 // import credendials from './macom-news-firebase.json';
